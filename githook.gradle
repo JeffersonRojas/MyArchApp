@@ -1,0 +1,17 @@
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task installGitHooks(type: Copy) {
+    from "${rootProject.rootDir}/githooks"
+    into "${rootProject.rootDir}/.git/hooks"
+    fileMode 0777
+}
+
+task clearGitHooks(type: Delete) {
+    delete "${rootProject.rootDir}/.git/hooks"
+}
+
+installGitHooks.dependsOn clearGitHooks
+
+tasks.getByPath(':app:preBuild').dependsOn installGitHooks
