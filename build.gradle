@@ -3,7 +3,8 @@ buildscript {
             compileSdk: 29,
             minSdk    : 21,
             buildTools: '29.0.2',
-            kotlin    : '1.3.50'
+            kotlin    : '1.3.50',
+            navigation: '2.1.0'
     ]
     ext.releases = [
             versionCode: 1,
@@ -16,6 +17,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
     }
 }
 
