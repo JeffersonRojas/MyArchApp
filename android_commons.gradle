@@ -2,6 +2,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion versions.compileSdk
     defaultConfig {
@@ -14,6 +18,12 @@ android {
         release {
             minifyEnabled true
         }
+    }
+    dataBinding {
+        enabled true
+    }
+    androidExtensions {
+        experimental = true
     }
 }
 

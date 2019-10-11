@@ -1,2 +1,2 @@
-include ':app', ':navigation', ':common'
+include ':app', ':dashboard', ':common'
 rootProject.name='MyArchApp'
