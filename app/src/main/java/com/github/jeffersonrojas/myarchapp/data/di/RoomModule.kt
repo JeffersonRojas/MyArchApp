@@ -13,4 +13,7 @@ val roomModule = module {
             "app-db"
         ).build()
     }
+    single {
+        get<AppDatabase>().productDao()
+    }
 }

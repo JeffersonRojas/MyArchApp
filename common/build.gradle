@@ -22,8 +22,6 @@ dependencies {
     api "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
     api "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}"
     api "androidx.room:room-runtime:${versions.room}"
-    api "androidx.room:room-rxjava2:${versions.room}"
-    kapt "androidx.room:room-compiler:${versions.room}"
     / DI /
     api "org.koin:koin-android:${versions.koin}"
     api "org.koin:koin-android-scope:${versions.koin}"
