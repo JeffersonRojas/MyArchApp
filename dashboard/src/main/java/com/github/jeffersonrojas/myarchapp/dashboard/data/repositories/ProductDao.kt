@@ -13,7 +13,7 @@ import io.reactivex.Single
 interface ProductDao {
 
     @Query("SELECT * FROM ProductEntity")
-    fun getAll(): Flowable<List<ProductEntity>>
+    fun getAll(): Single<List<ProductEntity>>
 
     @Query("SELECT * FROM ProductEntity WHERE uid IN (:productIds)")
     fun loadAllByIds(productIds: IntArray): Flowable<List<ProductEntity>>
