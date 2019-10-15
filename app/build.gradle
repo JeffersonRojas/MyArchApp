@@ -7,9 +7,6 @@ android {
         applicationId "com.github.jeffersonrojas.myarchapp"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    dataBinding {
-        enabled true
-    }
 }
 
 dependencies {

@@ -3,10 +3,30 @@ apply plugin: 'com.android.library'
 apply from: '../android_commons.gradle'
 
 dependencies {
+    / Android /
     api 'com.google.android.material:material:1.1.0-beta01'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
     api "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
     api "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
     api "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+    / Data /
+    api 'com.google.code.gson:gson:2.8.6'
+    api 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxjava:2.2.13'
+    api "com.uber.autodispose:autodispose-android-archcomponents:${versions.autoDispose}"
+    api "com.squareup.okhttp3:okhttp:${versions.okhttp3}"
+    api "com.squareup.okhttp3:logging-interceptor:${versions.okhttp3}"
+    api "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    api "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}"
+    api "androidx.room:room-runtime:${versions.room}"
+    api "androidx.room:room-rxjava2:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
+    / DI /
+    api "org.koin:koin-android:${versions.koin}"
+    api "org.koin:koin-android-scope:${versions.koin}"
+    api "org.koin:koin-android-ext:${versions.koin}"
+    testImplementation "org.koin:koin-test:${versions.koin}"
 }
