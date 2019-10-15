@@ -15,8 +15,23 @@ android {
         versionName releases.versionName
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable = true
+            buildConfigField 'String', "HOST_API", '"https://qa.api.example.com/"'
+            manifestPlaceholders = [hostName:"qa.example.com"]
+        }
         release {
             minifyEnabled true
+            debuggable = false
+            buildConfigField 'String', "HOST_API", '"https://api.example.com/"'
+            manifestPlaceholders = [hostName:"example.com"]
+        }
+        staging {
+            minifyEnabled true
+            debuggable = true
+            buildConfigField 'String', "HOST_API", '"https://staging.api.example.com/"'
+            manifestPlaceholders = [hostName:"staging.example.com"]
         }
     }
     dataBinding {
@@ -24,6 +39,13 @@ android {
     }
     androidExtensions {
         experimental = true
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 

@@ -1,4 +1,4 @@
-package com.github.jeffersonrojas.myarchapp.common.ktx.presentation
+package com.github.jeffersonrojas.myarchapp.common.presentation.ktx
 
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
