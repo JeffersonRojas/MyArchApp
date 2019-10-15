@@ -2,6 +2,7 @@ package com.github.jeffersonrojas.myarchapp
 
 import android.app.Application
 import com.github.jeffersonrojas.myarchapp.common.data.di.networkModule
+import com.github.jeffersonrojas.myarchapp.data.di.roomModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -25,6 +26,7 @@ class App : Application() {
                 }
             )
             modules(networkModule)
+            modules(roomModule)
         }
     }
 }
