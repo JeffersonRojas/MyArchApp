@@ -1,0 +1,10 @@
+apply plugin: 'com.android.library'
+
+apply from: '../android_commons.gradle'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+dependencies {
+    api "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    api "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+}
